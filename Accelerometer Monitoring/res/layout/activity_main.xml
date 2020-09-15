@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/conlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BEBCBC"
+    android:isScrollContainer="true"
+    android:keepScreenOn="true"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <com.example.DWittaker.GraphView
+        android:id="@+id/gView"
+
+        android:layout_width="0dp"
+        android:layout_height="242dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
+        android:background="#111111"
+        android:requiresFadingEdge="horizontal|vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_run"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:onClick="runanimation"
+        android:text="@string/btn_run"
+        app:layout_constraintEnd_toStartOf="@+id/btn_stop"
+        app:layout_constraintTop_toBottomOf="@+id/gView" />
+
+    <Button
+        android:id="@+id/btn_stop"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:onClick="stopanimation"
+        android:text="@string/btn_stop"
+        app:layout_constraintEnd_toEndOf="@+id/gView"
+        app:layout_constraintTop_toBottomOf="@+id/gView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:text="ID"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Age"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintStart_toEndOf="@+id/editText_ID"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Name"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/editText_Age"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_ID"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:alpha="255"
+        android:background="@android:drawable/editbox_background"
+        android:ems="100"
+        android:inputType="number"
+        android:singleLine="true"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/gView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editText_Age"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10"
+        android:inputType="number"
+        android:singleLine="true"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/gView"
+        app:layout_constraintStart_toEndOf="@+id/editText_ID"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editText_Name"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/gView"
+        app:layout_constraintStart_toEndOf="@+id/editText_Age"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RadioGroup
+        android:id="@+id/RadioGroup_Sex"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#00D8D4D4"
+        android:contentDescription="Sex"
+        app:layout_constraintBottom_toTopOf="@+id/gView"
+        app:layout_constraintStart_toEndOf="@+id/editText_Name"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton_Male"
+            android:layout_width="65dp"
+            android:layout_height="20dp"
+            android:buttonTint="#FFFFFF"
+            android:checked="true"
+            android:text="Male"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Female"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:buttonTint="#FFFFFF"
+            android:text="Female"
+            android:textColor="#FFFFFF" />
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/switchmode"
+        android:layout_width="39dp"
+        android:layout_height="51dp"
+        android:checked="true"
+        android:onClick="setgraphMode"
+        android:showText="false"
+        android:splitTrack="false"
+        android:text="Replay | Live "
+        android:textOff="Ticker"
+        android:textOn="HRM"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/gView"
+        app:layout_constraintEnd_toEndOf="@+id/gView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_register"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:onClick="registerPatient"
+        android:text="Register"
+        app:layout_constraintBottom_toTopOf="@+id/gView"
+        app:layout_constraintEnd_toEndOf="@+id/gView" />
+
+    <Button
+        android:id="@+id/btn_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:onClick="uploadDatabase"
+        android:text="Upload"
+        app:layout_constraintStart_toStartOf="@+id/gView"
+        app:layout_constraintTop_toBottomOf="@+id/gView" />
+
+    <Button
+        android:id="@+id/btn_download"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:onClick="downloadDatabase"
+        android:text="Download"
+        app:layout_constraintStart_toEndOf="@+id/btn_upload"
+        app:layout_constraintTop_toBottomOf="@+id/gView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

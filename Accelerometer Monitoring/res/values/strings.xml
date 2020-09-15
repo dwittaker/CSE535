@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DWittaker</string>
+    <string name="btn_run">Run</string>
+    <string name="btn_stop">Stop</string>
+    <string name="btn_restart">Restart</string>
+    <string name="horline_thick">10</string>
+    <string name="lastframeshown">0</string>
+</resources>
