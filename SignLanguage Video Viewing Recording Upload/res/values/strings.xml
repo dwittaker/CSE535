@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">ASL Classifying Mobile Project</string>
+    <string name="asl_video_to_view">asl_video_to_view</string>
+    <string name="asl_video_to_record">asl_video_to_record</string>
+    <string name="asl_training_video_url">asl_training_video_url</string>
+    <string name="user_name">user_name</string>
+    <string name="enter_last_name">Enter Last Name</string>
+    <string name="enter_practice_number">Enter Practice Number</string>
+    <string name="select_one">Select</string>
+
+
+    <string name="buy">Buy</string>
+    <string name="house">House</string>
+    <string name="fun">Fun</string>
+    <string name="hope">Hope</string>
+    <string name="arrive">Arrive</string>
+    <string name="really">Really</string>
+    <string name="read">Read</string>
+    <string name="lip">Lip</string>
+    <string name="mouth">Mouth</string>
+    <string name="some">Some</string>
+    <string name="communicate">Communicate</string>
+    <string name="write">Write</string>
+    <string name="create">Create</string>
+    <string name="pretend">Pretend</string>
+    <string name="sister">Sister</string>
+    <string name="man">Man</string>
+    <string name="one">One</string>
+    <string name="drive">Drive</string>
+    <string name="perfect">Perfect</string>
+    <string name="mother">Mother</string>
+    <string name="practice">PRACTICE</string>
+    <string name="upload">UPLOAD</string>
+
+
+</resources>
